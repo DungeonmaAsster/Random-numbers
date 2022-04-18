@@ -1,0 +1,20 @@
+import random
+x=random.randint(1, 50)
+#print(x)
+print('Привет, в этой игре тебе нужно угадать число от одного до пятидесяти, на всё у тебя есть 6 попыток, удачи.')
+for i in range(1,7):
+    selected_number=int(input())
+    if x==selected_number:
+            print('Поздравляю, ты победил!')
+            break
+    else:
+        if i==6:
+            print('Кажется попытки кончились, ты проиграл.')
+            break
+        else:
+            print(f'Ты не угадал у тебя осталось {6-i} попыток.')
+    if selected_number>x:
+        print('Подсказка:твоё число больше загаданного')
+    else:
+        print('Подсказка:твоё число меньше загаданного')
+        continue
